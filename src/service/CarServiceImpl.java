@@ -31,9 +31,8 @@ public class CarServiceImpl implements CarService {
 	@Override
 	@GET
 	@Path("/sell/{id}/{amount}")
-	public String sellCar(@PathParam("id") String idEAN, @PathParam("amount") int amount) {
+	public void sellCar(@PathParam("id") String idEAN, @PathParam("amount") int amount) {
 		carc.updateCar(idEAN, amount);
-		return "hecho actualizado";
 	}
 
 	@Override

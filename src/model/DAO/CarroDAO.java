@@ -50,6 +50,7 @@ public class CarroDAO {
 				System.out.println("Hecho");
 				return true;
 			} else {
+				System.out.println("No hay suficientes autos");
 				em.getTransaction().rollback();
 				em.close();
 				return false;

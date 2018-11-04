@@ -2,6 +2,7 @@ package controller;
 
 import model.DAO.CarroDAO;
 import model.DTO.Car;
+import service.client.CarClient;
 
 public class controllerCar {
 	CarroDAO DAOCar;
@@ -32,9 +33,10 @@ public class controllerCar {
 		boolean status = true;
 		status = DAOCar.updateamount(idEAN, amount);
 		if (status == false) {
-			// Hacer web service
+			CarClient cc = new CarClient();
+			cc.search(idEAN, amount);
 		}else {
-			System.out.println("actualicé");
+			System.out.println("sell do it!");
 		}
 	}
 }

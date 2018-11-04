@@ -6,7 +6,7 @@ public interface CarService {
 
 	public String addCar(Car c);
 
-	public String sellCar(String idEAN, int ammount);
+	public void sellCar(String idEAN, int ammount);
 
 	public Car getAllCar(String idEAN);
 
