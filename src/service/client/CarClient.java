@@ -10,7 +10,7 @@ public class CarClient {
 		HttpURLConnection connection = null;
 		int result=0;
 		try {
-			URL url = new URL("http://172.30.41.23:8080/rest/servicio/actualizar/" + id + "/" + amount);
+			URL url = new URL("http://localhost1:8080/rest/servicio/actualizar/" + id + "/" + amount);
 			connection = (HttpURLConnection) url.openConnection();
 			
 			connection.setRequestMethod("PUT");

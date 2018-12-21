@@ -2,7 +2,9 @@ package model.DTO;
 
 import java.io.Serializable;
 import javax.persistence.*;
-import javax.xml.bind.annotation.XmlRootElement;
+import org.codehaus.jackson.map.annotate.JsonRootName;
+
+import com.google.gson.annotations.Expose;
 
 
 
@@ -12,15 +14,16 @@ import javax.xml.bind.annotation.XmlRootElement;
  */
 @Entity
 @NamedQuery(name="Car.findAll", query="SELECT c FROM Car c")
-@XmlRootElement(name = "response")
+@JsonRootName("response")
 public class Car implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	@Id
+	@Expose
 	private String eancode;
-
+	@Expose
 	private Integer amount;
-
+	@Expose
 	private String description;
 
 	public Car() {

@@ -1,8 +1,10 @@
 package model;
 
-import javax.xml.bind.annotation.XmlRootElement;
+//import javax.xml.bind.annotation.XmlRootElement;
 
-@XmlRootElement(name = "response")
+import org.codehaus.jackson.map.annotate.JsonRootName;
+@JsonRootName(value="response")
+//@XmlRootElement(name = "response")
 public class GenericResponse {
 
 	private boolean status;

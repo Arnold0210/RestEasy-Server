@@ -4,10 +4,10 @@ import model.DTO.Car;
 
 public interface CarService {
 
-	public String addCar(Car c);
+	public String addCar(String c);
 
 	public void sellCar(String idEAN, int ammount);
 
-	public Car getAllCar(String idEAN);
+	public String getAllCar(String idEAN);
 
 }
