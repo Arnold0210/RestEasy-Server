@@ -49,6 +49,7 @@ public class CarServiceImpl implements CarService {
 	public String getAllCar(@PathParam("idEAN") String idEAN) {
 		Car c = carc.selectCar(idEAN);
 		String jsonString = gsonPretty.toJson(c);
+		//Pruebas
 		return jsonString;
 	}
 
