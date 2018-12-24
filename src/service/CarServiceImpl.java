@@ -42,6 +42,7 @@ public class CarServiceImpl implements CarService {
 	public Car getAllCar(@PathParam("idEAN") String idEAN) {
 		Car c = carc.selectCar(idEAN);
 		return c;
+		//prueba2
 	}
 
 }
