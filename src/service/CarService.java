@@ -1,10 +1,12 @@
 package service;
 
-import model.DTO.Car;
+import org.json.simple.JSONObject;
+import org.json.simple.parser.ParseException;
+
 
 public interface CarService {
 
-	public String addCar(String c);
+	public String addCar(String c) throws ParseException;
 
 	public void sellCar(String idEAN, int ammount);
 

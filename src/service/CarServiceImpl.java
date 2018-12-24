@@ -7,7 +7,10 @@ import javax.ws.rs.PUT;
 import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
-import javax.ws.rs.core.MediaType;
+
+import org.json.simple.JSONObject;
+import org.json.simple.parser.JSONParser;
+import org.json.simple.parser.ParseException;
 
 import com.google.gson.*;
 
@@ -19,14 +22,14 @@ import model.DTO.Car;
 @Consumes("application/json")
 @Produces("application/json")
 public class CarServiceImpl implements CarService {
-
+	private Gson gson = new Gson();
+	private Gson gsonPretty = new GsonBuilder().setPrettyPrinting().create(); 
 	private controllerCar carc = new controllerCar();
 
 	@Override
 	@POST
 	@Path("/newcar")
-	public String addCar(String car) {
-		Gson gson = new GsonBuilder().excludeFieldsWithoutExposeAnnotation().create();
+	public String addCar(String car) throws ParseException {
 		Car c = gson.fromJson(car, Car.class);
 		CarroDAO carro = new CarroDAO();
 		carro.createcar(c);
@@ -45,8 +48,7 @@ public class CarServiceImpl implements CarService {
 	@Path("/query/{idEAN}")
 	public String getAllCar(@PathParam("idEAN") String idEAN) {
 		Car c = carc.selectCar(idEAN);
-		Gson gson = new GsonBuilder().excludeFieldsWithoutExposeAnnotation().create();
-		String jsonString = gson.toJson(c);
+		String jsonString = gsonPretty.toJson(c);
 		return jsonString;
 	}
 
