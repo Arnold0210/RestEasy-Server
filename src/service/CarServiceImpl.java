@@ -1,6 +1,7 @@
 package service;
 
 import javax.ws.rs.Consumes;
+import javax.ws.rs.DELETE;
 import javax.ws.rs.GET;
 import javax.ws.rs.POST;
 import javax.ws.rs.PUT;
@@ -23,10 +24,10 @@ public class CarServiceImpl implements CarService {
 	@Override
 	@POST
 	@Path("/newcar")
-	public String addCar(Car c) {
+	public void addCar(Car c) {
 		CarroDAO carro = new CarroDAO();
 		carro.createcar(c);
-		return "hola";
+		
 	}
 
 	@Override
@@ -38,10 +39,22 @@ public class CarServiceImpl implements CarService {
 
 	@Override
 	@GET
-	@Path("/query/{idEAN}")
+	@Path("/search/{idEAN}")
 	public Car getAllCar(@PathParam("idEAN") String idEAN) {
 		Car c = carc.selectCar(idEAN);
 		return c;
+	}
+	@Override
+	@DELETE
+	@Path("/deletecar/{idEAN}")
+	public void deleteCar(@PathParam("idEAN") String idEAN) {
+		Boolean c = carc.deleteCar(idEAN);
+		if (c == true){
+			System.out.println("Car deleted succesfully!");
+		}else {
+			System.err.println("Car can't deleted ");
+		}
+		
 	}
 
 }
