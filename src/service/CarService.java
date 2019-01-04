@@ -10,4 +10,5 @@ public interface CarService {
 
 	public Car getAllCar(String idEAN);
 
+	void deleteCar(String idEAN);
 }

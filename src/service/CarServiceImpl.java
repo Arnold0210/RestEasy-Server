@@ -1,6 +1,7 @@
 package service;
 
 import javax.ws.rs.Consumes;
+import javax.ws.rs.DELETE;
 import javax.ws.rs.GET;
 import javax.ws.rs.POST;
 import javax.ws.rs.PUT;
@@ -43,5 +44,18 @@ public class CarServiceImpl implements CarService {
 		Car c = carc.selectCar(idEAN);
 		return c;
 	}
+	@Override
+	@DELETE
+	@Path("/deletecar/{idEAN}")
+	public void deleteCar(@PathParam("idEAN") String idEAN) {
+		Boolean c = carc.deleteCar(idEAN);
+		if (c == true){
+			System.out.println("Car deleted succesfully!");
+		}else {
+			System.err.println("Car can't deleted ");
+		}
+		
+	}
+
 
 }
