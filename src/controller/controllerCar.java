@@ -35,8 +35,20 @@ public class controllerCar {
 		if (status == false) {
 			CarClient cc = new CarClient();
 			cc.search(idEAN, amount);
-		}else {
+		} else {
 			System.out.println("sell do it!");
+		}
+	}
+
+	public Boolean deleteCar(String idEAN) {
+		DAOCar = new CarroDAO();
+		boolean car;
+		car = DAOCar.deleteCar(idEAN);
+		if (car == false) {
+			System.err.println("Can't delete this car");
+			return false;
+		} else {
+			return true;
 		}
 	}
 }

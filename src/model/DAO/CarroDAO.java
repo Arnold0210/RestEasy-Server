@@ -63,4 +63,21 @@ public class CarroDAO {
 		}
 	}
 
+	public Boolean deleteCar(String idEAN) {
+		Car car = selectCar(idEAN);
+		try {
+			em.getTransaction().begin();
+			;
+			em.remove(car);
+			em.getTransaction().commit();
+			em.close();
+			return true;
+		} catch (Exception e) {
+			System.err.println("Exception" + e + "\n");
+			em.getTransaction().rollback();
+			em.close();
+			return false;
+		}
+	}
+
 }

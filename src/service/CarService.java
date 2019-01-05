@@ -1,8 +1,6 @@
 package service;
 
-import org.json.simple.JSONObject;
 import org.json.simple.parser.ParseException;
-
 
 public interface CarService {
 
@@ -12,4 +10,5 @@ public interface CarService {
 
 	public String getAllCar(String idEAN);
 
+	void deleteCar(String idEAN);
 }
