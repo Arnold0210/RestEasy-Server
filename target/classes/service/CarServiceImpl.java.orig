@@ -56,4 +56,9 @@ public class CarServiceImpl implements CarService {
 		}
 		
 	}
+<<<<<<< HEAD
+=======
+
+>>>>>>> feature/C00002
+
 }

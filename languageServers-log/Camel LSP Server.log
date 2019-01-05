@@ -1,0 +1,20 @@
+
+LSP4E to Camel LSP Server:Content-Length: 824
+
+
+LSP4E to Camel LSP Server:{"jsonrpc":"2.0","id":"1","method":"initialize","params":{"processId":3548,"rootPath":"/A:/2018-III/Arquitectura de Software/Configuraciones eclipse archivos/apache-tomcat-9.0.12/","rootUri":"file:///A:/2018-III/Arquitectura%20de%20Software/Configuraciones%20eclipse%20archivos/apache-tomcat-9.0.12/","capabilities":{"workspace":{"applyEdit":true,"symbol":{},"executeCommand":{"dynamicRegistration":true},"workspaceFolders":true},"textDocument":{"synchronization":{"willSave":true,"willSaveWaitUntil":true,"didSave":true},"completion":{"completionItem":{"snippetSupport":true}},"hover":{},"signatureHelp":{},"references":{},"documentHighlight":{},"documentSymbol":{},"formatting":{},"rangeFormatting":{},"definition":{},"codeAction":{},"codeLens":{},"documentLink":{},"rename":{}}},"clientName":"Eclipse IDE","trace":"off"}}
+Camel LSP Server to LSP4E:{"jsonrpc":"2.0","method":"window/logMessage","params":{"type":3,"message":"Connected to Language Server..."}}
+Camel LSP Server to LSP4E:{"jsonrpc":"2.0","method":"window/logMessage","params":{"type":3,"message":"Initializing capabilities of the server..."}}
+Camel LSP Server to LSP4E:{"jsonrpc":"2.0","id":"1","result":{"capabilities":{"textDocumentSync":1,"hoverProvider":true,"completionProvider":{"resolveProvider":true,"triggerCharacters":[".","?","\u0026","\"","\u003d"]}}}}
+LSP4E to Camel LSP Server:Content-Length: 52
+
+
+LSP4E to Camel LSP Server:{"jsonrpc":"2.0","method":"initialized","params":{}}
+LSP4E to Camel LSP Server:Content-Length: 1705
+
+
+LSP4E to Camel LSP Server:{"jsonrpc":"2.0","method":"textDocument/didOpen","params":{"textDocument":{"uri":"file:///A:/2018-III/Arquitectura%20de%20Software/Configuraciones%20eclipse%20archivos/apache-tomcat-9.0.12/work/ClimaProyecto/WEB-INF/classes/META-INF/persistence.xml","languageId":"LANGUAGE_ID_APACHE_CAMEL","version":1,"text":"\u003c?xml version\u003d\"1.0\" encoding\u003d\"UTF-8\"?\u003e\r\n\u003cpersistence version\u003d\"2.1\"\r\n\txmlns\u003d\"http://xmlns.jcp.org/xml/ns/persistence\"\r\n\txmlns:xsi\u003d\"http://www.w3.org/2001/XMLSchema-instance\"\r\n\txsi:schemaLocation\u003d\"http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd\"\u003e\r\n\t\u003cpersistence-unit name\u003d\"clima\" transaction-type\u003d\"RESOURCE_LOCAL\"\u003e\r\n\t\t\u003cclass\u003emodel.DTO.Ciudad\u003c/class\u003e\r\n\t\t\u003cclass\u003emodel.DTO.Clima\u003c/class\u003e\r\n\t\t\u003cproperties\u003e\r\n\t\t\t\u003cproperty name\u003d\"javax.persistence.jdbc.url\" value\u003d\"jdbc:postgresql://ec2-50-16-196-138.compute-1.amazonaws.com:5432/dda1iurb1hi1vh?sslmode\u003drequire\u0026amp;user\u003dtssvygukfgsmfs\u0026amp;password\u003ddda7a0bd32bdfeb2c61ccef1b80bf25160e18fd0e64af4869d02498082cd02a9\"/\u003e\r\n\t\t\t\u003cproperty name\u003d\"javax.persistence.jdbc.user\" value\u003d\"tssvygukfgsmfs\"/\u003e\r\n\t\t\t\u003cproperty name\u003d\"javax.persistence.jdbc.password\" value\u003d\"dda7a0bd32bdfeb2c61ccef1b80bf25160e18fd0e64af4869d02498082cd02a9\"/\u003e\r\n\t\t\t\u003cproperty name\u003d\"javax.persistence.jdbc.driver\" value\u003d\"org.postgresql.Driver\"/\u003e\r\n\t\t\u003c/properties\u003e\r\n\t\u003c/persistence-unit\u003e\r\n\u003c/persistence\u003e\r\n"}}}
+LSP4E to Camel LSP Server:Content-Length: 773
+
+
+LSP4E to Camel LSP Server:{"jsonrpc":"2.0","method":"textDocument/didOpen","params":{"textDocument":{"uri":"file:///A:/2018-III/Arquitectura%20de%20Software/Configuraciones%20eclipse%20archivos/apache-tomcat-9.0.12/src/META-INF/persistence.xml","languageId":"LANGUAGE_ID_APACHE_CAMEL","version":1,"text":"\u003c?xml version\u003d\"1.0\" encoding\u003d\"UTF-8\"?\u003e\r\n\u003cpersistence version\u003d\"2.1\" xmlns\u003d\"http://xmlns.jcp.org/xml/ns/persistence\" xmlns:xsi\u003d\"http://www.w3.org/2001/XMLSchema-instance\" xsi:schemaLocation\u003d\"http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd\"\u003e\r\n\t\u003cpersistence-unit name\u003d\"apache-tomcat-9.0.12\"\u003e\r\n\t\u003c/persistence-unit\u003e\r\n\u003c/persistence\u003e\r\n"}}}
