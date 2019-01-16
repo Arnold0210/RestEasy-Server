@@ -1,14 +1,18 @@
 package service;
 
+import javax.ws.rs.core.Response;
+
 import org.json.simple.parser.ParseException;
+
+import com.google.gson.JsonObject;
 
 public interface CarService {
 
-	public String addCar(String c) throws ParseException;
+	public void addCar(String c) throws ParseException;
 
 	public void sellCar(String idEAN, int ammount);
 
-	public String getAllCar(String idEAN);
+	public Response getAllCar(String idEAN);
 
-	void deleteCar(String idEAN);
+	Response deleteCar(String idEAN);
 }
